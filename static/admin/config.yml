@@ -16,115 +16,110 @@ collections:
         label: 'Home Page'
         name: 'home'
         fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'home-page' }
+          - { label: Slug, name: slug, widget: string }
+          - { label: 'Product Slug', name: product_slug, widget: string }
           - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'home-page',
-        }
-      - { label: Slug, name: slug, widget: string }
-      - { label: 'Product Slug', name: product_slug, widget: string }
-      - {
-          label: 'NavBar',
-          name: navbar,
-          widget: object,
-          fields:
-            [
-              { label: Logo, name: logo, widget: image },
-              { label: 'Brand Slug', name: brand_slug, widget: string },
-            ],
-        }
-      - { label: Title, name: title, widget: string }
-      - { label: 'Brand Heading', name: brand_heading, widget: text }
-      - { label: Heading, name: heading, widget: string }
-      - { label: Subheading, name: subheading, widget: string }
-      - {
-          label: 'Hero Image',
-          name: hero_image,
-          widget: object,
-          fields:
-            [
-              { label: Image, name: image, widget: image },
-              { label: 'Alt text', name: alt, widget: string },
-            ],
-        }
-      - {
-          label: Offerings,
-          name: offerings,
-          widget: object,
-          fields:
-            [
-              {
-                label: Blurbs,
-                name: blurbs,
-                widget: list,
-                fields:
-                  [
-                    { label: Image, name: image, widget: image },
-                    { label: Slug, name: slug, widget: string },
-                    { label: Name, name: name, widget: string },
-                    { label: Text, name: text, widget: text },
-                  ],
-              },
-            ],
-        }
-      - {
-          label: Partners,
-          name: partners,
-          widget: object,
-          fields:
-            [
-              {
-                label: Logo,
-                name: logo,
-                widget: list,
-                fields: [{ label: Image, name: image, widget: image }],
-              },
-            ],
-        }
-      - {
-          label: Quote,
-          name: quote,
-          widget: object,
-          fields:
-            [
-              { label: Text, name: text, widget: text },
-              { label: Name, name: name, widget: string },
-              { label: Title, name: title, widget: string },
-              { label: Image, name: image, widget: image },
-            ],
-      }
-      - {
-          label: Advantages,
-          name: advantages,
-          widget: object,
-          fields:
-            [
-              {
-                label: Icon,
-                name: icon,
-                widget: list,
-                fields:
-                  [
-                    { label: Image, name: image, widget: image },
-                    { label: Text, name: text, widget: text },
-                  ],
-              },
-            ],
-        }
-      - {
-          label: 'Footer',
-          name: footer,
-          widget: object,
-          fields:
-            [
-              { label: Logo, name: logo, widget: image },
-              { label: Email, name: email, widget: string },
-              { label: Newsletter, name: newsletter, widget: string },
-            ],
-        }
-      - { label: 'Meta Title', name: meta_title, widget: string }
-      - { label: 'Meta Description', name: meta_description, widget: text }
+            label: 'NavBar',
+            name: navbar,
+            widget: object,
+            fields:
+              [
+                { label: Logo, name: logo, widget: image },
+                { label: 'Brand Slug', name: brand_slug, widget: string },
+              ],
+          }
+          - { label: Title, name: title, widget: string }
+          - { label: 'Brand Heading', name: brand_heading, widget: text }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - {
+            label: 'Hero Image',
+            name: hero_image,
+            widget: object,
+            fields:
+              [
+                { label: Image, name: image, widget: image },
+                { label: 'Alt text', name: alt, widget: string },
+              ],
+            }
+          - {
+            label: Offerings,
+            name: offerings,
+            widget: object,
+            fields:
+              [
+                {
+                  label: Blurbs,
+                  name: blurbs,
+                  widget: list,
+                  fields:
+                    [
+                      { label: Image, name: image, widget: image },
+                      { label: Slug, name: slug, widget: string },
+                      { label: Name, name: name, widget: string },
+                      { label: Text, name: text, widget: text },
+                    ],
+                },
+              ],
+            }
+          - {
+            label: Partners,
+            name: partners,
+            widget: object,
+            fields:
+              [
+                {
+                  label: Logo,
+                  name: logo,
+                  widget: list,
+                  fields: [{ label: Image, name: image, widget: image }],
+                },
+              ],
+            }
+          - {
+            label: Quote,
+            name: quote,
+            widget: object,
+            fields:
+              [
+                { label: Text, name: text, widget: text },
+                { label: Name, name: name, widget: string },
+                { label: Title, name: title, widget: string },
+                { label: Image, name: image, widget: image },
+              ],
+          }
+          - {
+            label: Advantages,
+            name: advantages,
+            widget: object,
+            fields:
+              [
+                {
+                  label: Icon,
+                  name: icon,
+                  widget: list,
+                  fields:
+                    [
+                      { label: Image, name: image, widget: image },
+                      { label: Text, name: text, widget: text },
+                    ],
+                },
+              ],
+            }
+          - {
+            label: 'Footer',
+            name: footer,
+            widget: object,
+            fields:
+              [
+                { label: Logo, name: logo, widget: image },
+                { label: Email, name: email, widget: string },
+                { label: Newsletter, name: newsletter, widget: string },
+              ],
+            }
+          - { label: 'Meta Title', name: meta_title, widget: string }
+          - { label: 'Meta Description', name: meta_description, widget: text }
   - name: 'about'
     label: 'About Page'
     file: 'src/pages/about'
