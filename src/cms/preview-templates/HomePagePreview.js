@@ -13,7 +13,6 @@ const HomePagePreview = ({ entry, getAsset }) => {
 
   return (
     <HomePageTemplate
-      product_slug={entry.getIn(['data', 'product_slug'])}
       title={entry.getIn(['data', 'title'])}
       meta_title={entry.getIn(['data', 'meta_title'])}
       meta_description={entry.getIn(['data', 'meta_description'])}
@@ -23,7 +22,6 @@ const HomePagePreview = ({ entry, getAsset }) => {
       }}
       navbar={{
         logo: entry.getIn(['data', 'navbar', 'logo']),
-        brand_slug: entry.getIn(['data', 'navbar', 'brand_slug']),
       }}
       heading={entry.getIn(['data', 'heading'])}
       subheading={entry.getIn(['data', 'subheading'])}
