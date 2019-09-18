@@ -17,8 +17,6 @@ collections:
         name: 'home'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'home-page' }
-          - { label: Slug, name: slug, widget: string }
-          - { label: 'Product Slug', name: product_slug, widget: string }
           - {
             label: 'NavBar',
             name: navbar,
@@ -26,7 +24,6 @@ collections:
             fields:
               [
                 { label: Logo, name: logo, widget: image },
-                { label: 'Brand Slug', name: brand_slug, widget: string },
               ],
           }
           - { label: Title, name: title, widget: string }
@@ -86,7 +83,6 @@ collections:
                 { label: Text, name: text, widget: text },
                 { label: Name, name: name, widget: string },
                 { label: Title, name: title, widget: string },
-                { label: Image, name: image, widget: image },
               ],
           }
           - {
