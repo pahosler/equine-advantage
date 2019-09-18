@@ -48,11 +48,8 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        slug
-        product_slug
         navbar {
           logo
-          brand_slug
         }
         title
         heading

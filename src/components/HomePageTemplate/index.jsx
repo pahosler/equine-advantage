@@ -9,7 +9,7 @@ import Quote from '../Quote'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
-const BrandPageTemplate = ({
+const HomePageTemplate = ({
   meta_title,
   meta_description,
   navbar,
@@ -28,7 +28,7 @@ const BrandPageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <NavBar logo={navbar.logo} slug={navbar.brand_slug} />
+    <NavBar logo={navbar.logo} />
     <section className='hero is-white has-section-padding-none'>
       <div className='hero-body'>
         <div className='container'>
@@ -106,7 +106,7 @@ const BrandPageTemplate = ({
   </div>
 )
 
-BrandPageTemplate.propTypes = {
+HomePageTemplate.propTypes = {
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   heading: PropTypes.string,
@@ -147,4 +147,4 @@ BrandPageTemplate.propTypes = {
   }),
 }
 
-export default BrandPageTemplate
+export default HomePageTemplate

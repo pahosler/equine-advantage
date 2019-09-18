@@ -1,9 +1,6 @@
 ---
 templateKey: home-page
-slug: ea-product-page
-product_slug: ea-product-page
 navbar:
-  brand_slug: ea-product-page
   logo: /img/equineadvantage_logo.svg
 title: Equine Advantage
 brand_heading: EQUINE ADVANTAGE PRODUCTS
