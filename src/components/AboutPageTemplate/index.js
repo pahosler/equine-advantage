@@ -25,52 +25,21 @@ const AboutPageTemplate = ({
   const PostContent = contentComponent || Content
   return (
     <Fragment>
-      <div className='section hero is-paddingless'>
-        {/* <div className='hero-head'><NavBar logo={navbar.logo} slug={navbar.brand_slug} /></div> */}
-
+      <div className='section hero is-medium is-ea-black is-marginless is-paddingless is-clipped' style={{
+        backgroundImage: `url(${hero_image.image})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'auto',
+        backgroundPosition: '-100px -350px',
+      }}>
         <div
-          className='hero-head is-ea-black is-paddingless is-marginless'
+          className='hero-body '
           style={{
-            position: 'relative',
-            height: 442,
-            overflow: 'hidden',
-            backgroundPosition: 'center center',
-            zIndex: -100,
-          }}>
-          <div
-            style={{
-              backgroundRepeat: 'no-repeat',
-              position: 'relative',
-              top: 300,
-              left: -300,
-              transform: 'scale(3.5)',
-              width: '100%',
-              height: '100%',
-              overflow: 'visible',
-              backgroundImage: `url(${hero_image.image})`,
-              backgroundSize: 'contain',
-              backgroundPosition: 'center',
-              zIndex: -99,
-            }}
-          />
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            height: '100%',
-            width: '100%',
             backgroundColor: 'rgba(0,0,0,.5)',
-            zIndex: 1,
-          }}
-          />
-        </div>
-        <div className='hero-body' >
-          <div className='container content' style={{ position: 'absolute', top: 100 }}>
-            <div className='columns'>
-              <div className='column is-4 is-offset-3'>
-                <div className={`title is-size-2 is-Gilroy-bold ${font_color}`}>{heading}</div>
-                <div className='subtitle is-Gilroy-light has-text-light-grey is-size-5'>{subheading}</div>
-              </div>
+          }}>
+          <div className='columns'>
+            <div className='column is-4 is-offset-3'>
+              <div className={`title is-size-2 is-Gilroy-bold ${font_color}`}>{heading}</div>
+              <div className='subtitle is-Gilroy-light has-text-light-grey is-size-5'>{subheading}</div>
             </div>
           </div>
         </div>
@@ -107,7 +76,7 @@ const AboutPageTemplate = ({
         <div className='columns is-multiline is-centered is-mobile is-horizontal-center'>
           {advantages.icon.map((images, keys) => (
             <div key={keys} className='column is-4-mobile is-1-desktop is-block'>
-              <figure className='image is-64x64'>
+              <figure className='image is-64x64' >
                 <img src={images.image} alt='an advantage icon' />
               </figure>
             </div>
@@ -120,7 +89,7 @@ const AboutPageTemplate = ({
           {!partners ||
             partners.logo.map((images, keys) => (
               <div key={keys} className='column is-4-mobile is-1-desktop is-block'>
-                <figure className='image is-96x96'>
+                <figure className='image is-96x96' >
                   <img src={images.image} alt='an advantage icon' />
                 </figure>
               </div>

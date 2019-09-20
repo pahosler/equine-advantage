@@ -1,14 +1,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { HTMLContent } from '../components/Content'
 import AboutPageTemplate from '../components/AboutPageTemplate'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel'
+import 'pure-react-carousel/dist/react-carousel.es.css'
+
+const Carousel = (props) => (
+  <div className='section hero is-medium'>
+    <div className='columns is-centered'>
+      <CarouselProvider
+        naturalSlideWidth={150}
+        naturalSlideHeight={250}
+        totalSlides={props.carousel.edges.length}
+        visibleSlides={3}
+      >
+        <div className='section is-paddingless is-marginless' style={{ height: 200, width: 460 }}>
+          <div className='container'>
+            <Slider style={{ position: 'relative', top: -20, height: 300 }}>
+              {props.carousel.edges.map((items, index) => {
+                return (
+                  <Slide key={index} index={index}>
+                    <Link to={`about/${items.node.frontmatter.slug}`}>
+                      <Image src={items.node.frontmatter.product_image} alt={items.node.frontmatter.heading} />
+                      <p className='is-Gilroy-bold is-size-7 has-text-ea-black has-text-centered' style={{ position: 'relative', bottom: 0 }}> {items.node.frontmatter.heading}</p>
+                    </Link>
+                  </Slide>
+                )
+              })}
+            </Slider>
+            <ButtonBack className='is-hidden-mobile' style={{ position: 'relative', bottom: 30 }}>Back</ButtonBack>
+            <ButtonNext className='is-hidden-mobile' style={{ position: 'relative', bottom: 30 }}>Next</ButtonNext>
+          </div>
+        </div>
+      </CarouselProvider>
+    </div>
+  </div>
+)
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: allPages } = data
+  const { allMarkdownRemark: carousel } = data
   return (
     <Layout>
       <NavBar logo={allPages.frontmatter.navbar.logo} slug={allPages.frontmatter.navbar.brand_slug} />
@@ -30,6 +65,7 @@ const AboutPage = ({ data }) => {
         meta_title={allPages.frontmatter.meta_title}
         meta_description={allPages.frontmatter.meta_description}
       />
+      <Carousel carousel={carousel} />
       <Footer
         logo={allPages.frontmatter.footer.logo}
         email={allPages.frontmatter.footer.email}
@@ -45,12 +81,30 @@ AboutPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
+  allMarkdownRemark: PropTypes.shape({
+    edges: PropTypes.arrayOf({
+      node: PropTypes.shape({
+        frontmatter: PropTypes.object,
+      }),
+    }),
+  }),
 }
 
 export default AboutPage
 
 export const pageQuery = graphql`
   query AboutPage($id: String) {
+    allMarkdownRemark(filter: {frontmatter: {product_image: {ne: null}}}) {
+      edges {
+        node {
+          frontmatter {
+            product_image
+            heading
+            slug
+          }
+        }
+      }
+    },
     markdownRemark(id: { eq: $id }) {
       id
       html
