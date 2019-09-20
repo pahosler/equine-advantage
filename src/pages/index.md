@@ -88,5 +88,5 @@ footer:
   logo: /img/equineadvantage_logo_white.svg
   newsletter: 'https://newsletter.com'
 meta_title: Equine Advantage
-meta_description: The best a horse can get.
+meta_description: Formulated by veteran equine nutritionists.
 ---
