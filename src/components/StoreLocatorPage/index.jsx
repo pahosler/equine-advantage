@@ -62,11 +62,12 @@ export default class StoreLocatorPage extends React.Component {
     const mapProps = {
       mapOptions: {
         gestureHandling: `cooperative`,
-        defaultZoom: 9,
       },
       onChange: this.getLocations,
       locations: this.state.locations,
       height: 500,
+      zoom: 12,
+      center: this.state.locations[1],
       mapLoaded: () => {
         this.setState({ mapLoaded: true })
       },
