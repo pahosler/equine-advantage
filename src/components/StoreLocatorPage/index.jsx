@@ -15,8 +15,8 @@ const locations = [
     id: 1,
     lat: 29.982540,
     lng: -90.107371,
-    show: false,
-    name: 'Chipolte',
+    show: true,
+    name: 'Chipolte1',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const locations = [
     lat: 29.982660,
     lng: -90.163828,
     show: true,
-    name: 'Chipolte',
+    name: 'Chipolte2',
   },
 ]
 
@@ -62,9 +62,11 @@ export default class StoreLocatorPage extends React.Component {
     const mapProps = {
       mapOptions: {
         gestureHandling: `cooperative`,
+        defaultZoom: 9,
       },
       onChange: this.getLocations,
       locations: this.state.locations,
+      height: 500,
       mapLoaded: () => {
         this.setState({ mapLoaded: true })
       },
@@ -91,25 +93,12 @@ export default class StoreLocatorPage extends React.Component {
                 {/* <p className='title'>Main column</p>
                 <p className='subtitle'>With some content</p> */}
                 <div className='content'>
-                  {/* <Map
-              style='mapbox://styles/mapbox/streets-v11'
-              center={[-90.120844, 29.958165]}
-              containerStyle={{
-                height: 500,
-                width: 500,
-              }}
-            >
-              <ZoomControl position='bottom-right' />
-              <Layer className='marker' type='symbol' id='marker' layout={{ 'icon-image': 'harbor-15' }}>
-                <Feature coordinates={[-90.120844, 29.958165]} />
-              </Layer>
-            </Map> */}
                   <Map {...mapProps}>
                     {(location, closeLocation) => (
                       <Info
                         show={location.show}
                         style={{
-                          height: '30px',
+                          height: '50px',
                           backgroundColor: '#696969',
                           width: '120px',
                         }}
@@ -134,7 +123,9 @@ export default class StoreLocatorPage extends React.Component {
                               fontWeight: 800,
                             }}
                             onClick={() => closeLocation(location.id)}
-                          />
+                          >
+                          [x]
+                          </div>
                         </div>
                       </Info>
                     )}
