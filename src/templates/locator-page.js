@@ -12,6 +12,8 @@ const LocatorPage = ({ data }) => {
         title={frontmatter.title}
         subtitle={frontmatter.subtitle}
         heading={frontmatter.heading}
+        navbar={frontmatter.navbar}
+        footer={frontmatter.footer}
         meta_title={frontmatter.meta_title}
         meta_description={frontmatter.meta_description}
       />
@@ -36,9 +38,17 @@ export const locatorPageQuery = graphql`
       frontmatter {
         title
         subtitle
+        heading
+        navbar {
+          logo
+        }
+        footer {
+          logo
+          email
+          newsletter
+        }
         meta_title
         meta_description
-        heading
       }
     }
   }

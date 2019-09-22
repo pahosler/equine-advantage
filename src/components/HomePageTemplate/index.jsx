@@ -1,11 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-// import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Products from '../Products'
 import Quote from '../Quote'
-// import Advantage from '../Advantage'
-// import Partner from '../Partners'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
