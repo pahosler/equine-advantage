@@ -66,7 +66,7 @@ export default class StoreLocatorPage extends React.Component {
       onChange: this.getLocations,
       locations: this.state.locations,
       height: 500,
-      zoom: 12,
+      zoom: 10,
       center: this.state.locations[1],
       mapLoaded: () => {
         this.setState({ mapLoaded: true })
@@ -161,6 +161,9 @@ export default class StoreLocatorPage extends React.Component {
               </article>
             </div>
           </div>
+
+        </section>
+        <section>
           <Footer
             logo={footer.logo}
             email={footer.email}

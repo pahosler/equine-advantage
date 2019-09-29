@@ -29,9 +29,9 @@ class NavBar extends React.Component {
         render={data => (
           <nav className='navbar' aria-label='main navigation' >
             <div className='navbar-brand is-centered' style={{ flex: 1, justifyContent: 'center', marginTop: -10 }}>
-              <Link to={`/`} className='navbar-item'>
+              <a href={`/`} className='navbar-item'>
                 <img src={logo} alt='logo' />
-              </Link>
+              </a>
               <div
                 className={`navbar-burger ${this.state.isActive ? 'is-active' : ''}`}
                 style={{ padding: 10, marginRight: 10, marginTop: 5 }}
