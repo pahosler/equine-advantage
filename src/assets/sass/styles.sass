@@ -159,3 +159,50 @@ $EA-senior: hsla(109, 23%, 64%, 1)
 
 .slick-slide img
   margin: auto
+
+.hero-image
+  background-repeat: no-repeat
+  background-size: auto
+  // background-position: -100px -350px
+
+// desktop-large
+@media only screen and (min-width: 1200px) and (max-width: 2048px)
+  .hero-image
+    background-size: 1600px
+    background-position: -100px -350px
+
+  .md-content
+    height: 450px 
+    width: 70% 
+    margin-bottom: 250px 
+    padding: auto 
+
+@media only screen and (min-width: 760px) and (max-width: 1199px)
+  .hero-image 
+    background-size: 1550px
+    background-position: -250px -250px
+
+  .md-content
+    height: 450px 
+    width: 70% 
+    margin-bottom: 250px 
+    padding: auto 
+
+
+// pixel2(XL) iPhone 6/7/8 plus
+@media only screen and (min-width: 400px) and (max-width: 767px)
+  .hero-image
+    background-size: 750px
+    background-position: -200px -100px
+
+// iPad
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+  .hero-image
+    background-size: 1600px
+    background-position: -500px -200px
+
+// iPhone 5/6/7/8/X, Galaxy S5
+@media only screen and (min-width: 320px) and (max-width: 399px)
+  .hero-image
+    background-size: 900px
+    background-position: -355px -100px

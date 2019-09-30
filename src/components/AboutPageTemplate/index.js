@@ -26,11 +26,8 @@ const AboutPageTemplate = ({
   const PostContent = contentComponent || Content
   return (
     <Fragment>
-      <div className='section hero is-medium is-ea-black is-marginless is-paddingless is-clipped' style={{
+      <div className='section hero is-medium is-ea-black is-marginless is-paddingless is-clipped hero-image' style={{
         backgroundImage: `url(${hero_image.image})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'auto',
-        backgroundPosition: '-100px -350px',
       }}>
         <div
           className='hero-body '
@@ -62,7 +59,7 @@ const AboutPageTemplate = ({
                 {/* Ingredients */}
                 <div className='tile is-7-mobile is-10 is-parent is-marginless is-paddingless'>
                   <div className='tile is-child'>
-                    <div className='is-size-6 is-size-7-mobile' style={{ height: 450, width: '50%', marginBottom: 250, padding: 'auto' }}>
+                    <div className='is-size-6 is-size-7-mobile md-content' style={{ }}>
                       <PostContent content={content} />
                     </div>
                   </div>
