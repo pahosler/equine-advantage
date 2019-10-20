@@ -11,7 +11,7 @@ subheading: >
   A pelleted feed that is concentrated and designed to be fed along with quality hay or pasture. Fortified with Grand Meadows supplement for optimum levels of vitamins and trace minerals. Contains high quality protein, essential amino acids and higher levels of both biotin and lysine.
 heading_image: /img/ea-threebagsfull.png
 hero_image:
-  image: /img/horse_balance.png
+  image: /img/ration_balancer_banner.png
   alt: image of a horse
 product_image: /img/EA_rationbalancer_web.png
 advantages:

@@ -26,8 +26,8 @@ const AboutPageTemplate = ({
   const PostContent = contentComponent || Content
   return (
     <Fragment>
-      <div className='section hero is-medium is-ea-black is-marginless is-paddingless is-clipped hero-image' style={{
-        backgroundImage: `url(${hero_image.image})`,
+      <div className='section hero is-large is-ea-black is-marginless is-paddingless' style={{
+        background: `#000000 url(${hero_image.image})  center/cover no-repeat `,
       }}>
         <div
           className='hero-body '

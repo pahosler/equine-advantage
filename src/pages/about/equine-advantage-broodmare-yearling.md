@@ -11,7 +11,7 @@ subheading: >
   A textured feed that is designed for pregnant and lactating mares, breeding stallions, along with growing horses and ponies. Fortified with Grand Meadows supplement for the overall health and immune system of your horse. Formulated to promote healthy growth and bone development in weanling and yearling horses.
 heading_image: /img/ea-threebagsfull.png
 hero_image:
-  image: /img/horse_balance.png
+  image: /img/broodmare_yearling_banner.png
   alt: image of a horse
 product_image: /img/EA_broodmare_web.png
 advantages:

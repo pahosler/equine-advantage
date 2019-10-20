@@ -44,9 +44,9 @@ class NavBar extends React.Component {
             </div>
             <div className={`navbar-menu ${this.state.isActive ? 'is-active' : ''}`} id='navMenu' style={{ fontFamily: 'Gilroy', fontWeight: 'bold', fontStyle: 'normal' }}>
               <div className='navbar-end' style={{ flex: 1, justifyContent: 'center' }}>
-                <Link to='locator' className='navbar-item'>
+                <a href={'/locator'} className='navbar-item'>
                   FIND A STORE
-                </Link>
+                </a>
                 <a href='#contact' target='_self' className='navbar-item'>
                   CONTACT US
                 </a>

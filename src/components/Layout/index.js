@@ -27,6 +27,7 @@ class Layout extends Component {
         <Helmet>
           <title>{config.siteTitle}</title>
           <meta name='description' content={config.siteDescription} />
+          <meta name='og:image' content={`${config.logo}`} />
         </Helmet>
         {/* <NavBar isActive={this.state.isActive} toggleNavbar={() => this.toggleNavbar()} /> */}
         <Fragment>{this.props.children}</Fragment>

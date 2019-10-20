@@ -11,7 +11,7 @@ subheading: >
   A textured feed that is designed for horses that require moderate to significant calories in addition to their forage. Fortified with Grand Meadows supplement for the overall health and immune system of your horse. Made with calm digestible energy that comes from high quality fiber and fat sources.
 heading_image: /img/ea-threebagsfull.png
 hero_image:
-  image: /img/horseback.png
+  image: /img/low_starch_banner.png
   alt: image of a horse
 product_image: /img/EA_LowStarch_Web.png
 advantages:

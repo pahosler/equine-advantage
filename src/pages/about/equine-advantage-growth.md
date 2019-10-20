@@ -11,7 +11,7 @@ subheading: >
   A textured feed designed for growing horses up to 2 years of age. Fortified with Grand Meadows for the overall health and immune system of your horse. It is highly palatable and promotes proper growth and development in young horses. Moderate fiber levels from highly digestible sources, such as shredded beet pulp and soybean hulls.
 heading_image: /img/ea-threebagsfull.png
 hero_image:
-  image: /img/horse_balance.png
+  image: /img/growth_banner.png
   alt: image of a horse
 product_image: /img/EA_growth_web.png
 advantages:
