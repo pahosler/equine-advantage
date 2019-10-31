@@ -54,9 +54,10 @@ const Map = () => {
 
   return (
     <GoogleMap
-      defaultZoom={10}
+      defaultZoom={12}
       defaultCenter={{ lat, lng }}
     >
+      <Marker position={{ lat, lng }} name={'You Are Here!'} />
       {locationData().map(store => (
         <Marker
           key={store.wpsl_id}
@@ -68,7 +69,7 @@ const Map = () => {
           }}
           icon={{
             url: `/img/equineadvantage_logo.svg`,
-            scaledSize: new window.google.maps.Size(25, 25),
+            scaledSize: new window.google.maps.Size(50, 50),
           }}
         />
       ))}
@@ -120,11 +121,11 @@ const StoreLocatorPage = ({
               </div>
             </article>
           </div>
-          <div className='tile is-parent is-8'>
+          <div className='tile is-parent is-8' style={{ height: 600, width: '70%' }}>
             <article className='tile is-child box'>
               {/* <p className='title'>Main column</p>
                 <p className='subtitle'>With some content</p> */}
-              <div className='content'>
+              <div className='content' style={{ height: '100%', width: '100%' }}>
                 <MapWrapped
                   googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
                     process.env.GATSBY_APP_GOOGLE_KEY

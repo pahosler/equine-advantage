@@ -12,11 +12,11 @@ const Products = ({ gridItems, logo }) => (
               <section className='section '>
                 <div className='columns is-centered is-multiline is-mobile'>
                   <div className='column is-half is-horizontal-center'>
-                    <Link to={`/about/${item.slug}`}>
-                      <figure className='image is-128x128'>
+                    <a href={`/about/${item.slug}`}>
+                      <figure className='image is-128x128 has-shadow'>
                         <img src={item.image} />
                       </figure>
-                    </Link>
+                    </a>
                   </div>
                   <div className='column is-12'>
                     <h3 className='is-size-5 has-text-ea-black is-Gilroy-black' style={{ paddingTop: 40 }}>
